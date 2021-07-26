@@ -1,22 +1,43 @@
+---
+const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
+const tasks = ["Working on a side project", "Listening to music", "Reading about saving the planet", "On a nature walk", "Exercising", "Hard at work"];
+const taskEmojis = ["⌨️", "🎧", "📖", "🌳", "🏋🏼‍♂️","👨🏼‍💻"];
+const primary: string = colors[Math.floor(Math.random()*colors.length)];
+const styleString: string = `--theme-primary:var(--${primary}); --theme-primary-rgb:var(--${primary}-rgb);`;
+const favicon: string = `/style/favicon/${primary.toUpperCase()}.svg`;
+
+const index = new Date().getDay();
+const activityEmoji = taskEmojis[index];
+const activity = tasks[index];
+
+import Footer from '../components/footer.astro';
+import Header from '../components/header.astro';
+---
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{"Daniel Susman"}</title>
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="icon" type="image/svg+xml" href={favicon}>
     <link rel="stylesheet" href="/style/global.css">
     <link rel="stylesheet" href="/style/home.css">
-
     <style>
-        header {
-            display: flex;
-            flex-direction: column;
-            gap: 1em;
-            max-width: min(100%, 68ch);
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
     </style>
 </head>
-<body>
-<div>Site coming soon...</div>
+<body style={styleString}>
+    <Header/>
+    <main>
+        <div class="container">
+            <div class="about">
+                <p>Dan Susman is a software developer from Poughkeepsie, New York. A rising third year Computer Science student at <a href="https://www.khoury.northeastern.edu/locations/boston/">Northeastern University</a>, Dan is passionate about embracing differences and collaborating to solve the world's greatest challenges.</p>
+            </div>
+            <div class="task">
+                <p class="emoji">{activityEmoji}</p>
+                <p class="status">{activity}</p>
+            </div>
+        </div>
+    </main>
+    <Footer/>
 </body>
 </html>

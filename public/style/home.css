@@ -1,52 +1,88 @@
-:root {
-    --font-mono: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace;
-    --color-light: #F3F4F6;
+header {
+  height: fit-content;
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --color-light: #1F2937;
-    }
+header a {
+  display: flex;
+  font-size: clamp(2rem, -0.4742rem + 6.1856vw, 2.75rem);
+  text-decoration: none;
+  color: initial;
+  width: fit-content;
 }
 
-a {
-    color: inherit;
+header .title {
+  font-size: 3rem;
+  padding-left: 1rem;
 }
 
-header > div {
-    font-size: clamp(2rem, -0.4742rem + 6.1856vw, 2.75rem);
+.logo {
+  width: 3rem;
+  height: 5rem;
 }
 
-header > div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-header h1 {
-    font-size: 1em;
-    font-weight: 500;
-}
-header img {
-    width: 2em;
-    height: 2.667em;
-}
-
-h2 {
-    font-weight: 500;
+@media screen and (min-width: 800px) {
+  main p {
     font-size: clamp(1.5rem, 1rem + 1.25vw, 2rem);
+  }
 }
 
-.counter {
-  display: grid;
-  grid-auto-flow: column;
-  gap: 1em;
-  font-size: 2rem;
-  justify-content: center;
-  padding: 2rem 1rem;
+main .container {
+  display: flex;
+  max-width: 60rem;
+  height: fit-content;
 }
 
-.counter > pre {
-  text-align: center;
-  min-width: 3ch;
+.task {
+  color: var(--theme-primary);
+  display: block;
+  align-items: center;
+}
+
+footer {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  left: 0em;
+  bottom: 0em;
+  background-color: rgba(var(--theme-primary-rgb), 0.1);
+  height: 5em;
+  padding: 1em;
+  width: 100%;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+footer .container {
+  margin-left: 1rem;
+}
+
+footer svg {
+  width: 0.75em;
+  height: 0.75em;
+}
+
+footer a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.heart {
+  fill: var(--theme-primary);
+  animation: heartbeat 3s ease-in-out infinite;
+}
+
+@keyframes heartbeat {
+  0%,
+  50%,
+  100% {
+    transform: scale(1);
+  }
+  5% {
+    transform: scale(1.125);
+  }
+  10% {
+    transform: scale(1.05);
+  }
+  15% {
+    transform: scale(1.25);
+  }
 }
