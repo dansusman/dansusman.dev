@@ -1,17 +1,14 @@
 ---
+import Footer from '../components/footer.astro';
+import Header from '../components/header.astro';
+import { getAction } from '../utils/activityGenerator.ts'
 const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
-const tasks = ["Working on a side project", "Listening to music", "Reading about saving the planet", "On a nature walk", "Exercising", "Hard at work"];
-const taskEmojis = ["⌨️", "🎧", "📖", "🌳", "🏋🏼‍♂️","👨🏼‍💻"];
 const primary: string = colors[Math.floor(Math.random()*colors.length)];
 const styleString: string = `--theme-primary:var(--${primary}); --theme-primary-rgb:var(--${primary}-rgb);`;
 const favicon: string = `/style/favicon/${primary.toUpperCase()}.svg`;
 
-const index = new Date().getDay();
-const activityEmoji = taskEmojis[index];
-const activity = tasks[index];
+const {activityEmoji, activity} = getAction(new Date());
 
-import Footer from '../components/footer.astro';
-import Header from '../components/header.astro';
 ---
 <html lang="en">
 <head>

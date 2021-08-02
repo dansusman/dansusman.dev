@@ -29,10 +29,11 @@
   --green-rgb: 69, 208, 22;
   --blue-rgb: 68, 134, 255;
   --purple-rgb: 202, 68, 255;
+  --grey: rgba(0, 0, 0, 0.7);
 }
 
 body {
-  padding: 4rem 2rem;
+  padding: 2rem 2rem;
   width: 100%;
   min-height: 100vh;
   display: grid;

@@ -1,5 +1,5 @@
 header {
-  height: fit-content;
+  height: 5em;
 }
 
 header a {
@@ -20,39 +20,84 @@ header .title {
   height: 5rem;
 }
 
-@media screen and (min-width: 800px) {
-  main p {
-    font-size: clamp(1.5rem, 1rem + 1.25vw, 2rem);
+main p {
+  font-size: clamp(1.5rem, 1rem + 1.25vw, 2rem);
+}
+
+@media screen and (max-width: 960px) {
+  main .container {
+    flex-direction: column;
+    width: 30rem;
+  }
+  main .task {
+    margin-top: 2em;
+  }
+  footer {
+    height: 9em;
+  }
+  footer .container {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  footer .logos {
+    margin-top: 1em;
+    margin-bottom: 1em;
   }
 }
 
 main .container {
   display: flex;
-  max-width: 60rem;
-  height: fit-content;
+  max-width: 50rem;
+  align-items: center;
 }
 
-.task {
+main .about {
+  margin-right: 1em;
+}
+
+main .task {
   color: var(--theme-primary);
-  display: block;
+  display: flex;
   align-items: center;
+  flex-direction: column;
+  white-space: nowrap;
 }
 
 footer {
   position: fixed;
   display: flex;
-  align-items: center;
   left: 0em;
   bottom: 0em;
-  background-color: rgba(var(--theme-primary-rgb), 0.1);
-  height: 5em;
-  padding: 1em;
+  font-size: 0.75em;
   width: 100%;
-  color: rgba(0, 0, 0, 0.5);
+  color: var(--grey);
+  background-color: rgba(var(--theme-primary-rgb), 0.1);
 }
 
 footer .container {
-  margin-left: 1rem;
+  display: flex;
+  padding: 2em;
+  width: 100%;
+}
+
+footer p {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+footer a {
+  color: inherit;
+}
+
+.logos {
+  margin: auto;
+}
+
+.tool {
+  margin-right: 0;
 }
 
 footer svg {
@@ -60,9 +105,24 @@ footer svg {
   height: 0.75em;
 }
 
-footer a {
-  text-decoration: none;
-  color: inherit;
+.logos svg {
+  width: 2em;
+  height: 2em;
+}
+
+.logos a {
+  margin-left: 1em;
+  background-color: inherit;
+}
+
+.tool svg {
+  width: 1.2em;
+  height: 1.2em;
+  vertical-align: middle;
+}
+
+.tool a {
+  background-color: inherit;
 }
 
 .heart {
