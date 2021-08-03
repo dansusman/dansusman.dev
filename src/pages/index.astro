@@ -14,7 +14,7 @@ const {activityEmoji, activity} = getAction(new Date());
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{"Daniel Susman"}</title>
+    <title>{"Daniel Susman - Developer"}</title>
     <link rel="icon" type="image/svg+xml" href={favicon}>
     <link rel="stylesheet" href="/style/global.css">
     <link rel="stylesheet" href="/style/home.css">
@@ -22,19 +22,26 @@ const {activityEmoji, activity} = getAction(new Date());
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
     </style>
 </head>
+<Header/>
 <body style={styleString}>
-    <Header/>
     <main>
         <div class="container">
             <div class="about">
                 <p>Dan Susman is a software developer from Poughkeepsie, New York. A rising third year Computer Science student at <a href="https://www.khoury.northeastern.edu/locations/boston/">Northeastern University</a>, Dan is passionate about embracing differences and collaborating to solve the world's greatest challenges.</p>
+                <div class="links">
+                    <a href="./about">About Me</a>
+                    <a href="./projects">Projects</a>
+                </div>
             </div>
             <div class="task">
+                <p class="currently">Currently, Dan is... </p>
                 <p class="emoji">{activityEmoji}</p>
                 <p class="status">{activity}</p>
             </div>
         </div>
+
     </main>
-    <Footer/>
+
 </body>
+<Footer/>
 </html>

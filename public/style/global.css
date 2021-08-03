@@ -32,14 +32,6 @@
   --grey: rgba(0, 0, 0, 0.7);
 }
 
-body {
-  padding: 2rem 2rem;
-  width: 100%;
-  min-height: 100vh;
-  display: grid;
-  justify-content: center;
-}
-
 a {
   color: var(--theme-primary);
 }

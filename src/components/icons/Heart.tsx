@@ -13,8 +13,8 @@ const Heart: React.FC<HeartProps> = () => {
       <path
         d="M104.094 104.094C144.338 144.745 207.146 208.187 207.146 208.187L312.281 104.094"
         stroke="var(--theme-primary)"
-        stroke-width="208.187"
-        stroke-linecap="round"
+        strokeWidth="208.187"
+        strokeLinecap="round"
       />
     </svg>
   );

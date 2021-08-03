@@ -226,7 +226,7 @@ export const getAction = (date: Date) => {
         index = 1;
         break;
       case 20:
-        index = 1;
+        index = 0;
         break;
       case 21:
         index = 10;
