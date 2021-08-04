@@ -5,7 +5,7 @@ html body {
   overflow: scroll;
 }
 header {
-  position: fixed;
+  position: relative;
   display: flex;
   left: 0;
   top: 0;
@@ -137,6 +137,9 @@ footer svg {
 }
 
 @media screen and (max-width: 960px) {
+  main {
+    height: 100%;
+  }
   main .container {
     flex-direction: column;
     width: 30rem;
@@ -162,6 +165,9 @@ footer svg {
 @media screen and (min-width: 960px) {
   footer svg {
     vertical-align: middle;
+  }
+  main {
+    height: 100vh;
   }
 }
 
