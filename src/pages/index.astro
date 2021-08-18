@@ -1,13 +1,10 @@
 ---
+import Header from '../components/headerDesktop.astro';
 import Footer from '../components/footer.astro';
-import Header from '../components/header.astro';
 import { getAction } from '../utils/activityGenerator.ts'
-const colors = ["red", "orange", "yellow", "green", "blue", "purple"];
-const primary: string = colors[Math.floor(Math.random()*colors.length)];
-const styleString: string = `--theme-primary:var(--${primary}); --theme-primary-rgb:var(--${primary}-rgb);`;
-const favicon: string = `/style/favicon/${primary.toUpperCase()}.svg`;
-
+import { getColor } from '../utils/primaryColorGenerator.ts'
 const {activityEmoji, activity} = getAction(new Date());
+const {styleString, favicon} = getColor()
 
 ---
 <html lang="en">

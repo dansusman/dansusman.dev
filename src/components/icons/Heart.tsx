@@ -6,15 +6,16 @@ const Heart: React.FC<HeartProps> = () => {
   return (
     <svg
       className="heart"
+      viewBox="0 0 11 10"
+      fill="none"
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 417 356"
     >
       <title>love</title>
       <path
-        d="M104.094 104.094C144.338 144.745 207.146 208.187 207.146 208.187L312.281 104.094"
+        d="M2.75 2.75C3.8132 3.82394 5.4725 5.5 5.4725 5.5L8.25 2.75"
         stroke="var(--theme-primary)"
-        strokeWidth="208.187"
-        strokeLinecap="round"
+        stroke-width="5.5"
+        stroke-linecap="round"
       />
     </svg>
   );
