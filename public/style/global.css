@@ -41,13 +41,15 @@ a:hover {
 }
 
 header {
-  position: relative;
   display: flex;
   left: 0;
   top: 0;
-  padding: 0.3em 0.75em;
   width: 100%;
   height: min-content;
+  padding-top: 0.5em;
+  padding-left: 90px;
+  padding-right: 90px;
+  align-items: center;
 }
 
 header a {
@@ -56,23 +58,30 @@ header a {
   color: initial;
   color: var(--theme-primary);
   width: fit-content;
-  align-items: center;
+}
+
+header a:hover {
+  background: inherit;
 }
 
 header img {
   fill: var(--theme-primary);
 }
 
+.links {
+  display: flex;
+  margin-left: auto;
+  justify-content: space-between;
+  width: 202px;
+}
+
 footer {
   position: relative;
   width: 100%;
-  display: flex;
-  margin: 0;
   left: 0;
   bottom: 0;
-  font-size: 0.75em;
+  font-size: 1em;
   color: var(--grey);
-  background-color: rgba(var(--theme-primary-rgb), 0.1);
 }
 
 footer .container {
@@ -97,38 +106,14 @@ footer a {
 }
 
 footer svg {
-  width: 0.75em;
-  height: 0.75em;
+  width: 1em;
+  height: 1em;
+  vertical-align: middle;
 }
 
 .heart {
   fill: var(--theme-primary);
   animation: heartbeat 3s ease-in-out infinite;
-}
-
-@media screen and (max-width: 960px) {
-  main {
-    height: 100%;
-  }
-  main .container {
-    flex-direction: column;
-    width: 30rem;
-  }
-  main .task {
-    margin-top: 0.75em;
-  }
-  footer {
-    height: 9em;
-  }
-  footer .container {
-    flex-direction: column;
-  }
-}
-
-@media screen and (min-width: 960px) {
-  footer svg {
-    vertical-align: middle;
-  }
 }
 
 @keyframes heartbeat {

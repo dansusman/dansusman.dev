@@ -3,6 +3,7 @@ import Header from '../components/headerDesktop.astro';
 import Footer from '../components/footer.astro';
 import { getAction } from '../utils/activityGenerator.ts'
 import { getColor } from '../utils/primaryColorGenerator.ts'
+import ExpandMoreIcon from '../components/icons/ExpandMoreIcon.tsx';
 const {activityEmoji, activity} = getAction(new Date());
 const {styleString, favicon} = getColor()
 
@@ -24,19 +25,11 @@ const {styleString, favicon} = getColor()
     <main>
         <div class="container">
             <div class="about">
-                <p>Dan Susman is a software developer from Poughkeepsie, New York. A rising third year Computer Science student at <a href="https://www.khoury.northeastern.edu/locations/boston/">Northeastern University</a>, Dan is passionate about embracing differences and collaborating to solve the world's greatest challenges.</p>
-                <div class="links">
-                    <a href="./about">About Me</a>
-                    <a href="./projects">Projects</a>
-                </div>
-            </div>
-            <div class="task">
-                <p class="currently">Currently, Dan is... </p>
-                <p class="emoji">{activityEmoji}</p>
-                <p class="status">{activity}</p>
-            </div>
+                <p>
+                <span class="wave">👋</span>
+                Hi!<br/> I'm Dan Susman, a software developer based in Boston, Massachusetts. I am passionate about creating impactful products that help shape the future of tech.</p>
+                <a class="such-as" href="/projects">Like these<ExpandMoreIcon class="expand-more" width="1em" height="1em" alt=""/></a>
         </div>
-
     </main>
 
 </body>
