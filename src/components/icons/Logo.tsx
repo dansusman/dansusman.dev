@@ -1,6 +1,9 @@
 import React from "react";
 
-interface LogoProps {}
+interface LogoProps {
+  width: string;
+  height: string;
+}
 
 const Logo: React.FC<LogoProps> = (props) => {
   return (

@@ -1,15 +1,11 @@
 main {
-  padding-left: 90px;
-  padding-right: 90px;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+  min-height: 80vh;
 }
 
 .about {
-  font-size: clamp(3em, 0.4626rem + 1.0309vw + var(--user-font-scale), 2rem);
-  max-width: 20em;
+  font-size: clamp(2em, 1rem + 5vw, 3rem);
+  max-width: 30em;
 }
 
 main .container {

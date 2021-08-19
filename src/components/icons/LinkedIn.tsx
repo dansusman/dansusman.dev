@@ -1,8 +1,11 @@
 import React from "react";
 
-interface HeartProps {}
+interface LogoProps {
+  width: string;
+  height: string;
+}
 
-const LinkedIn: React.FC<HeartProps> = (props) => {
+const LinkedIn: React.FC<LogoProps> = (props) => {
   return (
     <a target="_blank" href="https://www.linkedin.com/in/danielsusman/">
       <svg

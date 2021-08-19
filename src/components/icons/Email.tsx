@@ -1,8 +1,11 @@
 import React from "react";
 
-interface EmailProps {}
+interface LogoProps {
+  width: string;
+  height: string;
+}
 
-const Email: React.FC<EmailProps> = (props) => {
+const Email: React.FC<LogoProps> = (props) => {
   return (
     <a href="/email">
       <svg

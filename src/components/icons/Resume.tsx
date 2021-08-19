@@ -1,8 +1,11 @@
 import React from "react";
 
-interface ResumeProps {}
+interface LogoProps {
+  width: string;
+  height: string;
+}
 
-const Resume: React.FC<ResumeProps> = (props) => {
+const Resume: React.FC<LogoProps> = (props) => {
   return (
     <a target="_blank" href="/resume">
       <svg

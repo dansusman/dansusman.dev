@@ -1,5 +1,5 @@
 ---
-import Header from '../components/headerDesktop.astro';
+import HeaderDesktop from '../components/HeaderDesktop.tsx';
 import Footer from '../components/footer.astro';
 import { getAction } from '../utils/activityGenerator.ts'
 import { getColor } from '../utils/primaryColorGenerator.ts'
@@ -20,7 +20,7 @@ const {styleString, favicon} = getColor()
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
     </style>
 </head>
-<Header/>
+<HeaderDesktop client:media="(min-width: 960px)"/>
 <body style={styleString}>
     <main>
         <div class="container">

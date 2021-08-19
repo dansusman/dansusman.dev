@@ -1,8 +1,11 @@
 import React from "react";
 
-interface HeartProps {}
+interface LogoProps {
+  width: string;
+  height: string;
+}
 
-const GitHub: React.FC<HeartProps> = (props) => {
+const GitHub: React.FC<LogoProps> = (props) => {
   return (
     <a target="_blank" href="https://github.com/dansusman">
       <svg

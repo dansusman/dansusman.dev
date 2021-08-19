@@ -3,6 +3,15 @@
   margin: 0;
 }
 
+body {
+  padding-left: clamp(2rem, 12vw, 4em);
+  padding-right: clamp(2rem, 12vw, 4em);
+}
+
+img {
+  max-width: 100%;
+}
+
 *::selection {
   color: var(--theme-primary);
   background-color: rgba(var(--theme-primary-rgb), 0.1);
@@ -47,8 +56,6 @@ header {
   width: 100%;
   height: min-content;
   padding-top: 0.5em;
-  padding-left: 90px;
-  padding-right: 90px;
   align-items: center;
 }
 
@@ -86,7 +93,8 @@ footer {
 
 footer .container {
   display: flex;
-  padding: 2em;
+  padding-top: 1em;
+  padding-bottom: 2em;
   width: 100%;
   justify-content: center;
   align-items: center;
