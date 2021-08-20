@@ -1,15 +1,10 @@
 main {
   display: flex;
-  min-height: 80vh;
+  min-height: 100vh;
 }
 
 .about {
-  font-size: clamp(2em, 1rem + 5vw, 3rem);
   max-width: 30em;
-}
-
-main .container {
-  display: flex;
 }
 
 .wave {
@@ -21,7 +16,6 @@ main .container {
   color: var(--theme-primary);
   display: flex;
   text-decoration: none;
-  width: fit-content;
 }
 
 .expand-more {

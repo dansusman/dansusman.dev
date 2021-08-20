@@ -1,5 +1,6 @@
 ---
 import HeaderDesktop from '../components/HeaderDesktop.tsx';
+import { HeaderMobile } from '../components/HeaderMobile.tsx'
 import Footer from '../components/footer.astro';
 import { getAction } from '../utils/activityGenerator.ts'
 import { getColor } from '../utils/primaryColorGenerator.ts'
@@ -20,8 +21,9 @@ const {styleString, favicon} = getColor()
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
     </style>
 </head>
-<HeaderDesktop client:media="(min-width: 960px)"/>
 <body style={styleString}>
+    <HeaderDesktop />
+    <HeaderMobile />
     <main>
         <div class="container">
             <div class="about">
@@ -31,7 +33,6 @@ const {styleString, favicon} = getColor()
                 <a class="such-as" href="/projects">Like these<ExpandMoreIcon class="expand-more" width="1em" height="1em" alt=""/></a>
         </div>
     </main>
-
 </body>
 <Footer/>
 </html>

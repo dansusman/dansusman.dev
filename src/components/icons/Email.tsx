@@ -7,7 +7,7 @@ interface LogoProps {
 
 const Email: React.FC<LogoProps> = (props) => {
   return (
-    <a href="/email">
+    <a href="mailto:danielasusman@gmail.com">
       <svg
         fill="none"
         xmlns="http://www.w3.org/2000/svg"

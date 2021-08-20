@@ -5,7 +5,7 @@ interface LogoProps {
   height: string;
 }
 
-const Logo: React.FC<LogoProps> = (props) => {
+const Logo: React.FC<LogoProps> = (props: any) => {
   return (
     <svg
       fill="none"
