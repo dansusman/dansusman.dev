@@ -1,16 +1,17 @@
 export const getAction = (date: Date) => {
   const tasks = [
-    "Working on a side project",
-    "Listening to music",
-    "Reading about saving the planet",
-    "On a nature walk",
-    "Exercising",
-    "Hard at work",
-    "In class",
-    "Studying",
-    "Exploring Boston",
-    "Winding down",
-    "Cooking",
+    "working on a side project",
+    "listening to music",
+    "reading about saving the planet",
+    "on a walk",
+    "exercising",
+    "hard at work",
+    "in class",
+    "studying",
+    "exploring Boston",
+    "winding down",
+    "cooking",
+    "sleeping",
   ];
   const taskEmojis = [
     "⌨️",
@@ -24,6 +25,7 @@ export const getAction = (date: Date) => {
     "🗺",
     "🥱",
     "👨‍🍳",
+    "😴",
   ];
   const minDate = new Date(`09/01/${date.getFullYear()}`); // beginning of september of the current year
   const maxDate = new Date(`12/31/${date.getFullYear()}`); // end of december of the current year
@@ -61,7 +63,7 @@ export const getAction = (date: Date) => {
         index = 6;
         break;
       case 15:
-        index = 5;
+        index = 4;
         break;
       case 16:
         index = 5;
@@ -73,7 +75,7 @@ export const getAction = (date: Date) => {
         index = 10;
         break;
       case 19:
-        index = 65;
+        index = 5;
         break;
       case 20:
         index = 5;
@@ -85,7 +87,7 @@ export const getAction = (date: Date) => {
         index = 9;
         break;
       default:
-        index = 2;
+        index = 11;
         break;
     }
   } else if (isSchoolYear) {
@@ -96,6 +98,15 @@ export const getAction = (date: Date) => {
         break;
       case 9:
         index = 4;
+        break;
+      case 10:
+        index = 5;
+        break;
+      case 11:
+        index = 8;
+        break;
+      case 12:
+        index = 8;
         break;
       case 13:
         index = 7;
@@ -128,7 +139,7 @@ export const getAction = (date: Date) => {
         index = 9;
         break;
       default:
-        index = 8;
+        index = 11;
         break;
     }
   } else if (isWeekend) {
@@ -180,7 +191,7 @@ export const getAction = (date: Date) => {
         index = 9;
         break;
       default:
-        index = 2;
+        index = 11;
         break;
     }
   } else {
@@ -202,7 +213,7 @@ export const getAction = (date: Date) => {
         index = 5;
         break;
       case 12:
-        index = 1;
+        index = 4;
         break;
       case 13:
         index = 1;
@@ -220,7 +231,7 @@ export const getAction = (date: Date) => {
         index = 5;
         break;
       case 18:
-        index = 2;
+        index = 0;
         break;
       case 19:
         index = 1;
@@ -235,7 +246,7 @@ export const getAction = (date: Date) => {
         index = 10;
         break;
       default:
-        index = 4;
+        index = 11;
         break;
     }
   }

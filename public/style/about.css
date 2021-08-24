@@ -1,14 +1,63 @@
+.container {
+  max-width: 40em;
+  font-size: clamp(0.75rem, 2vw, 2rem);
+}
+
+h1 {
+  color: var(--theme-primary);
+  font-size: clamp(2rem, 6vw, 2em);
+}
+
+br {
+  content: "";
+  margin: clamp(1rem, 1vw, 2rem);
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  min-width: 100%;
+}
+
 .task {
   color: var(--theme-primary);
   display: flex;
-  align-items: center;
   flex-direction: column;
-  white-space: nowrap;
-  font-size: 1em;
-  margin-left: 2em;
-  margin-right: 2em;
+  max-width: 12em;
+}
+
+.tech {
+  display: flex;
+  gap: 4em;
+}
+
+.emojiAndStatus {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .currently {
   color: initial;
+  font-weight: 600;
+}
+
+.status {
+  font-family: monaco, Consolas, Lucida Console, monospace;
+}
+
+.cvrs {
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 520px) {
+  .container {
+    display: flex;
+  }
 }

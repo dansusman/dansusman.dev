@@ -5,8 +5,11 @@ import Footer from '../components/footer.astro';
 import {Links} from '../components/Links.tsx'
 import { getAction } from '../utils/activityGenerator.ts'
 import { getColor } from '../utils/primaryColorGenerator.ts'
+import { getImage } from '../utils/imageGenerator.ts'
+import superb from 'superb'
 const {activityEmoji, activity} = getAction(new Date());
 const {styleString, favicon} = getColor()
+const {imageSource, imageAltText} = getImage()
 ---
 <html lang="en">
 <head>
@@ -24,33 +27,43 @@ const {styleString, favicon} = getColor()
 <HeaderMobile class="mobile-header"/>
 <body style={styleString}>
     <div class="container">
+        <div>
         <h1>about me</h1>
-        <p class="info">I’m a third year student at Northeastern University, studying Computer Science. Since the beginning of my journey in the tech industry, I have thought writing optimized, efficient, abstracted code with clear and concise documentation is superb.
+        <p class="info">I’m a third year student at Northeastern University, studying Computer Science. Since the beginning of my journey in the tech industry, I have thought writing optimized, efficient, abstracted code with clear and concise documentation is <a class="superb" href="https://github.com/sindresorhus/superb">{superb.random()}</a>.
         <br/>
-        In 2021, I spent eight months at Corindus Vascular Robotics, a Siemens Healthineers Company, where I was a full-time software engineer. There, I focused on application development, DevOps, automation, and robotic systems design.
+        In 2021, I spent eight months at <a class="cvrs" href="https://www.corindus.com/">Corindus Vascular Robotics, a Siemens Healthineers Company</a>, where I was a full-time software engineer. There, I focused on application development, DevOps, automation, and robotic systems design.
         <br/>
-        My current focus is on full stack development with TypeScript, GraphQL, and React but I am actively exploring backend development as my interests in Golang, Deno, SQL, and Rust spike. I am a self-declared serial hobbyist and a big fan of Vim.</p>
-        <span class="tech">
-            <p>Here are some technologies I have been working with:<p>
+        My current focus is on full stack development with TypeScript, GraphQL, and React but I am actively exploring backend development as my interests in Golang, Deno, SQL, and Rust spike. I am a self-declared serial hobbyist and a big fan of Vim.
+        <br/>
+        Here are some technologies I have been working with:<p>
+        <div class="tech">
             <ul>
                 <li>TypeScript</li>
                 <li>React</li>
                 <li>Node.js</li>
                 <li>Astro</li>
                 <li>Python</li>
+            </ul>
+            <ul>
                 <li>Qt</li>
                 <li>Java</li>
                 <li>C++</li>
                 <li>SQL</li>
                 <li>Docker</li>
             </ul>
-        <span/>
-        <span class="task">
-            <p class="currently">Currently, Dan is... </p>
+        <div/>
+    </div>
+    </div>
+    <span class="images">
+        <img src={imageSource} alt={imageAltText}/>
+    </span>
+    <span class="task">
+        <p class="currently">Dan is currently...</p>
+        <span class="emojiAndStatus">
             <p class="emoji">{activityEmoji}</p>
             <p class="status">{activity}</p>
         </span>
-    </div>
+    </span>
 </body>
 <Footer/>
 <Links className="links" size="1.25em" smallerSize="1.1em"/>
