@@ -1,6 +1,8 @@
 ---
-import Header from '../components/headerDesktop.astro';
+import HeaderDesktop from '../components/HeaderDesktop.tsx';
+import { HeaderMobile } from '../components/HeaderMobile.tsx'
 import Footer from '../components/footer.astro';
+import {Links} from '../components/Links.tsx'
 import { getAction } from '../utils/activityGenerator.ts'
 import { getColor } from '../utils/primaryColorGenerator.ts'
 const {activityEmoji, activity} = getAction(new Date());
@@ -18,14 +20,38 @@ const {styleString, favicon} = getColor()
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
     </style>
 </head>
-<Header client:media="(min-width: 960px)" />
+<HeaderDesktop client:media="(min-width: 960px)" />
+<HeaderMobile class="mobile-header"/>
 <body style={styleString}>
-            <div class="task">
-                <p class="currently">Currently, Dan is... </p>
-                <p class="emoji">{activityEmoji}</p>
-                <p class="status">{activity}</p>
-            </div>
-
+    <div class="container">
+        <h1>about me</h1>
+        <p class="info">I’m a third year student at Northeastern University, studying Computer Science. Since the beginning of my journey in the tech industry, I have thought writing optimized, efficient, abstracted code with clear and concise documentation is superb.
+        <br/>
+        In 2021, I spent eight months at Corindus Vascular Robotics, a Siemens Healthineers Company, where I was a full-time software engineer. There, I focused on application development, DevOps, automation, and robotic systems design.
+        <br/>
+        My current focus is on full stack development with TypeScript, GraphQL, and React but I am actively exploring backend development as my interests in Golang, Deno, SQL, and Rust spike. I am a self-declared serial hobbyist and a big fan of Vim.</p>
+        <span class="tech">
+            <p>Here are some technologies I have been working with:<p>
+            <ul>
+                <li>TypeScript</li>
+                <li>React</li>
+                <li>Node.js</li>
+                <li>Astro</li>
+                <li>Python</li>
+                <li>Qt</li>
+                <li>Java</li>
+                <li>C++</li>
+                <li>SQL</li>
+                <li>Docker</li>
+            </ul>
+        <span/>
+        <span class="task">
+            <p class="currently">Currently, Dan is... </p>
+            <p class="emoji">{activityEmoji}</p>
+            <p class="status">{activity}</p>
+        </span>
+    </div>
 </body>
 <Footer/>
+<Links className="links" size="1.25em" smallerSize="1.1em"/>
 </html>

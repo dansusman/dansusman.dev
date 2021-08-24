@@ -3,15 +3,17 @@ import React from "react";
 interface LogoProps {
   width: string;
   height: string;
+  viewBox: string;
 }
 
 const Logo: React.FC<LogoProps> = (props: any) => {
+  const viewBox = "0 0 62 93";
   return (
     <svg
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       style={{ width: "inherit", height: "inherit" }}
-      viewBox="0 0 62 93"
+      viewBox={viewBox}
       {...props}
     >
       <path

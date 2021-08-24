@@ -3,8 +3,10 @@
 }
 
 body {
-  padding-left: 2em;
+  padding-top: clamp(1rem, 2vw, 2em);
   padding-right: 2em;
+  padding-left: 2em;
+  padding-bottom: clamp(1rem, 2vw, 2em);
 }
 
 img {
@@ -35,6 +37,7 @@ img {
 
 a {
   color: var(--theme-primary);
+  text-decoration: none;
 }
 
 a:hover {
@@ -53,25 +56,18 @@ header a:hover {
   background: inherit;
 }
 
-header img {
-  fill: var(--theme-primary);
-}
-
 .mobile-header {
   display: none;
 }
 
-.links {
+.headerLinks {
   display: flex;
   margin-left: auto;
   gap: clamp(0.3em, 2vw, 3em);
 }
 
 footer {
-  position: relative;
   width: 100%;
-  left: 0;
-  bottom: 0;
   font-size: clamp(0.4rem, 2vw, 1rem);
   color: var(--grey);
 }
@@ -91,6 +87,10 @@ footer a {
 footer svg {
   width: 1em;
   vertical-align: middle;
+}
+
+.links {
+  display: none;
 }
 
 .heart {
@@ -119,7 +119,23 @@ footer svg {
   header {
     display: none;
   }
+
   .mobile-header {
     display: flex;
+    left: 0;
+    top: 0;
+    width: 100%;
+    align-items: center;
+  }
+
+  .links {
+    position: relative;
+    display: flex;
+    margin-left: auto;
+    gap: clamp(0.3em, 2vw, 3em);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.5em;
   }
 }
