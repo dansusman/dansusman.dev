@@ -13,10 +13,12 @@ interface LinksProps {
 export const Links: React.FC<LinksProps> = (props) => {
   return (
     <div className={props.className}>
-      <GitHub width={props.size} height={props.size} />
-      <LinkedIn width={props.size} height={props.size} />
-      <Resume width={props.smallerSize} height={props.smallerSize} />
-      <Email width={props.size} height={props.size} />
+      <div className="link-container">
+        <GitHub width={props.size} height={props.size} />
+        <LinkedIn width={props.size} height={props.size} />
+        <Resume width={props.smallerSize} height={props.smallerSize} />
+        <Email width={props.size} height={props.size} />
+      </div>
     </div>
   );
 };

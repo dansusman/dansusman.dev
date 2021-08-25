@@ -240,10 +240,10 @@ export const getAction = (date: Date) => {
         index = 0;
         break;
       case 21:
-        index = 10;
+        index = 9;
         break;
       case 22:
-        index = 10;
+        index = 9;
         break;
       default:
         index = 11;
