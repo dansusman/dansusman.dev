@@ -1,22 +1,21 @@
 ---
+
 import HeaderDesktop from '../components/HeaderDesktop.tsx';
 import { HeaderMobile } from '../components/HeaderMobile.tsx'
 import Footer from '../components/footer.astro';
 import {Links} from '../components/Links.tsx'
 import { getColor } from '../utils/primaryColorGenerator.ts'
-import ExpandMoreIcon from '../components/icons/ExpandMoreIcon.tsx';
-import HoverText from '../components/HoverText.tsx'
 const {styleString, favicon} = getColor()
-
 ---
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>{"dansusman: developer"}</title>
+    <title>{"dansusman: tools"}</title>
     <link rel="icon" type="image/svg+xml" href={favicon}>
     <link rel="stylesheet" href="/style/global.css">
-    <link rel="stylesheet" href="/style/home.css">
+    <link rel="stylesheet" href="/style/uses.css">
+
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
     </style>
@@ -24,17 +23,8 @@ const {styleString, favicon} = getColor()
 <body style={styleString}>
     <HeaderDesktop />
     <HeaderMobile className="mobile-header"/>
-    <main>
-        <div class="about">
-            <p class="intro">
-            <span class="wave">👋</span>
-            Hi!<br/> I'm <HoverText client:load href="/about" altText="more about me" originalText="Dan Susman,"/>a software developer based in <a href="https://www.khoury.northeastern.edu/">Boston, Massachusetts.</a> I am passionate about creating impactful products that help shape the future of tech.</p>
-            <a class="such-as" href="/projects">Like these<ExpandMoreIcon class="expand-more" width="1em" height="1em" alt=""/></a>
-        </div>
-    </main>
+    <slot/>
 </body>
-
 <Footer/>
 <Links className="links" size="1.25em" smallerSize="1.1em"/>
 </html>
-

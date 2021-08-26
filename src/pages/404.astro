@@ -1,1 +1,38 @@
-<div>Hey</div>
+---
+import HeaderDesktop from '../components/HeaderDesktop.tsx';
+import { HeaderMobile } from '../components/HeaderMobile.tsx'
+import Footer from '../components/footer.astro';
+import {Links} from '../components/Links.tsx'
+import { getColor } from '../utils/primaryColorGenerator.ts'
+import ExpandMoreIcon from '../components/icons/ExpandMoreIcon.tsx';
+import HoverText from '../components/HoverText.tsx'
+const {styleString, favicon} = getColor()
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{"dansusman: developer"}</title>
+    <link rel="icon" type="image/svg+xml" href={favicon}>
+    <link rel="stylesheet" href="/style/global.css">
+    <link rel="stylesheet" href="/style/404.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+    </style>
+</head>
+<body style={styleString}>
+    <HeaderDesktop />
+    <HeaderMobile className="mobile-header"/>
+    <main>
+        <div class="container">
+            <h1>404</h1>
+            <h3>This page does not exist... How did you end up here?!</h3>
+            <a href="/">Let's go home.</a>
+        </div>
+    </main>
+</body>
+
+<Footer/>
+<Links className="links" size="1.25em" smallerSize="1.1em"/>
+</html>
+

@@ -1,0 +1,32 @@
+h1,
+h2,
+h3,
+h4 {
+  font-weight: inherit;
+  line-height: 1.42;
+}
+
+h1 {
+  font-size: 3.998rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2.827rem;
+}
+
+h3 {
+  font-size: 1.999rem;
+}
+
+h4 {
+  font-size: 1.414rem;
+}
+
+h5 {
+  font-size: 1.121rem;
+}
+
+h6 {
+  font-size: 0.88rem;
+}

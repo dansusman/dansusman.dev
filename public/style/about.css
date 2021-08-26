@@ -1,6 +1,6 @@
 .main {
-  max-width: 60em;
-  font-size: clamp(1rem, 2vw, 1.75rem);
+  max-width: 80em;
+  font-size: clamp(1.25rem, 2vw, 1.75rem);
   min-height: 88vh;
 }
 
@@ -26,9 +26,8 @@ ul {
   white-space: nowrap;
 }
 
-.tech {
-  display: flex;
-  gap: 4em;
+.task p {
+  margin: 0;
 }
 
 .emojiAndStatus {
@@ -54,22 +53,22 @@ ul {
   margin-top: 2rem;
 }
 
-@media screen and (min-width: 920px) {
+@media screen and (min-width: 820px) {
   .main {
     display: flex;
-    margin-top: 5em;
   }
   .rightPane {
     margin-left: clamp(3em, 2vw, 8em);
   }
 }
 
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 820px) {
   .rightPane {
     width: fit-content;
+    margin-bottom: 2em;
   }
 
   img {
-    width: 70%;
+    width: clamp(70%, 3vw, 100%);
   }
 }

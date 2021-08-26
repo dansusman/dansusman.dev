@@ -5,6 +5,10 @@ main {
   align-items: center;
 }
 
+abbr:hover {
+  text-decoration: none;
+}
+
 .about {
   font-size: clamp(1.5rem, 4vw, 4rem);
   max-width: 30em;
@@ -15,7 +19,7 @@ main {
 
 .wave {
   display: inline-block;
-  animation: waving 2s ease-in-out;
+  animation: waving 2s 2 ease-in-out;
 }
 
 .such-as {
@@ -27,6 +31,11 @@ main {
 
 .expand-more {
   animation: float 1.4s ease-in-out infinite;
+}
+
+.hover-text {
+  max-width: 0;
+  width: 20em;
 }
 
 @keyframes waving {

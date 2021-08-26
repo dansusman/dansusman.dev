@@ -1,6 +1,8 @@
 import React from "react";
 
-interface ExpandMoreIconProps {}
+interface ExpandMoreIconProps {
+  class: string;
+}
 
 const ExpandMoreIcon: React.FC<ExpandMoreIconProps> = (props) => {
   return (
@@ -9,6 +11,7 @@ const ExpandMoreIcon: React.FC<ExpandMoreIconProps> = (props) => {
       xmlns="http://www.w3.org/2000/svg"
       style={{ width: "inherit", height: "inherit" }}
       viewBox="0 0 24 24"
+      className={props.class}
       {...props}
     >
       <path d="M24 24H0V0h24v24z" opacity=".87" fill="none" />

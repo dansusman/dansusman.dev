@@ -27,7 +27,7 @@ const Logo: React.FC<LogoProps> = (props: any) => {
       <path
         d="M49.5878 22.3632C49.5878 22.3632 28.0006 36.6722 50.9429 47.6411C73.8852 58.61 47.9492 72.148 47.9492 72.148"
         stroke="currentColor"
-        stroke-width="10.3333"
+        strokeWidth="10.3333"
       />
     </svg>
   );

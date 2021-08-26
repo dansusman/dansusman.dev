@@ -1,7 +1,6 @@
 * {
-  margin: 0;
+  font-family: "Poppins", sans-serif;
 }
-
 body {
   padding-right: 3em;
   padding-left: 3em;
@@ -63,12 +62,10 @@ header a:hover {
 footer {
   font-size: clamp(0.4rem, 2vw, 1rem);
   color: var(--grey);
-  margin-top: 2em;
 }
 
 footer .container {
   display: flex;
-  padding-top: 1em;
   width: 100%;
   justify-content: center;
   align-items: center;
@@ -90,7 +87,6 @@ footer svg {
 .link-container {
   display: flex;
   width: 100%;
-  margin-top: 0.5em;
   justify-content: center;
   align-items: center;
   gap: clamp(0.3em, 2vw, 3em);
@@ -124,7 +120,7 @@ footer svg {
   }
 
   .mobile-header {
-    display: flex;
+    display: unset;
     left: 0;
     top: 0;
     width: 100%;
