@@ -7,7 +7,7 @@ interface LogoProps {
 
 const Resume: React.FC<LogoProps> = (props) => {
   return (
-    <a target="_blank" href="/resume">
+    <a target="_blank" href="/assets/resume.pdf">
       <svg
         fill="none"
         viewBox="0 0 35 35"

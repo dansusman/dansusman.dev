@@ -15,10 +15,30 @@ h3 {
 }
 
 h1 {
-  font-size: clamp(5.625em, 2vw, 12.5em);
+  font-size: clamp(6em, 15vw, 22.5em);
+  color: var(--buttonGrey);
 }
 
 h3 {
-  font-size: (0.4em, 1vw, 3.125em);
+  font-size: clamp(0.5em, 3vw, 4em);
   white-space: nowrap;
+}
+
+.navigation a {
+  font-size: clamp(1em, 2vw, 2em);
+  text-decoration: underline;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 520px) {
+  .navigation {
+    margin-top: 1em;
+    flex-direction: column;
+    align-items: center;
+    gap: 2em;
+  }
 }

@@ -25,10 +25,6 @@ br {
   display: block;
 }
 
-ul {
-  list-style-type: none;
-}
-
 a {
   text-decoration: none;
 }
@@ -67,12 +63,13 @@ button:hover {
 .project-pane {
   display: flex;
   flex-direction: column;
-  gap: 0.5em;
+  gap: 1em;
 }
 
 .content-pane {
   max-width: 30em;
   margin-left: 2em;
+  margin-top: 2em;
 }
 
 .p {

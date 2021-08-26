@@ -9,7 +9,7 @@ import { getColor } from '../utils/primaryColorGenerator.ts'
 const {styleString, favicon} = getColor()
 const showItem = (id: string) => { return `document.getElementsByClassName('${id}')[0].classList.add('show');` }
 const clearMode = "Array.from(document.getElementsByClassName('p')).forEach((e) => {e.classList.remove('show')});Array.from(document.getElementsByTagName('button')).forEach((e) => {e.classList.remove('active')});"
-const toggleActive = (id: string) => { return `document.getElementById('${id}').classList.add('active');document.getElementById('${id}Icon').classList.remove('hidden');`}
+const toggleActive = (id: string) => { return `document.getElementById('${id}').classList.add('active');`}
 const clearAndShow = (id : string) => { return clearMode + showItem(id) + toggleActive(id)}
 ---
 <html lang="en">
@@ -30,7 +30,7 @@ const clearAndShow = (id : string) => { return clearMode + showItem(id) + toggle
     <div class="main">
         <div class="project-pane">
             <h1>projects</h1>
-            <button id="wroteit" onclick={clearAndShow('wroteit')}><ExpandMoreIcon id="wroteitIcon" class="forward" hidden="true"/>wroteit</button>
+            <button id="wroteit" onclick={clearAndShow('wroteit')}>wroteit</button>
             <button id="portfolio" onclick={clearAndShow('portfolio')} >portfolio</button>  
             <button id="ui" onclick={clearAndShow('ui')}>robotics system ui</button>
             <button id="cloud" onclick={clearAndShow('cloud')}>robotic system cloud</button>
@@ -44,7 +44,7 @@ const clearAndShow = (id : string) => { return clearMode + showItem(id) + toggle
                 <br/>
                 <p class="small">Ingredients: TypeScript, GraphQL, React, Chakra UI, PostgreSQL, Next.js, Redis, TypeORM, and urql.</p>
                 <br/>
-                <VisitButton href="https://wrote.dansusman.dev"/>
+                <VisitButton href="https://wroteit.dansusman.dev"/>
             </div>
             <div class="p portfolio">
                 <h3>dansusman.dev</h3>
