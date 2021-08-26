@@ -30,3 +30,40 @@ h5 {
 h6 {
   font-size: 0.88rem;
 }
+
+ol {
+  padding: 0;
+  list-style-position: inside;
+}
+
+.backlinks {
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+  white-space: nowrap;
+  margin-top: 2em;
+}
+
+.back {
+  transform: rotate(90deg);
+  vertical-align: middle;
+  animation: floatBack 1.4s ease-in-out infinite;
+}
+
+.forward {
+  transform: rotate(-90deg);
+  vertical-align: middle;
+  animation: floatForward 1.4s ease-in-out infinite;
+}
+
+@keyframes floatBack {
+  50% {
+    transform: rotate(90deg) translateY(0.2em);
+  }
+}
+
+@keyframes floatForward {
+  50% {
+    transform: rotate(-90deg) translateY(0.2em);
+  }
+}

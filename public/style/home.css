@@ -13,6 +13,7 @@ abbr:hover {
   font-size: clamp(1.5rem, 4vw, 4rem);
   max-width: 30em;
 }
+
 .intro a:hover {
   text-decoration: underline;
 }
@@ -29,13 +30,16 @@ abbr:hover {
   margin-top: 1em;
 }
 
-.expand-more {
-  animation: float 1.4s ease-in-out infinite;
-}
-
 .hover-text {
   max-width: 0;
   width: 20em;
+  text-decoration: underline;
+}
+
+.forward {
+  transform: rotate(-90deg);
+  vertical-align: middle;
+  animation: floatForward 1.4s ease-in-out infinite;
 }
 
 @keyframes waving {
@@ -74,8 +78,8 @@ abbr:hover {
   }
 }
 
-@keyframes float {
+@keyframes floatForward {
   50% {
-    transform: translateY(0.2em);
+    transform: rotate(-90deg) translateY(0.2em);
   }
 }

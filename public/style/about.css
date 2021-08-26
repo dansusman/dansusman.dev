@@ -1,5 +1,5 @@
 .main {
-  max-width: 80em;
+  max-width: 70em;
   font-size: clamp(1.25rem, 2vw, 1.75rem);
   min-height: 88vh;
 }

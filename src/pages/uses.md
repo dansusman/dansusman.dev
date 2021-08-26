@@ -32,7 +32,7 @@ layout: ../layouts/uses.astro
 3. zsh/fish
 4. Spotify
 5. [TickTick](https://ticktick.com/?language=en_US)
-6. [Vanilla](https://matthewpalmer.net/vanilla/)
+6. [Dozer](https://github.com/Mortennn/Dozer)
 7. Slack
 8. [Magnet](https://apps.apple.com/us/app/magnet/id441258766?mt=12)
 9. [LastPass](https://www.lastpass.com/)
@@ -46,6 +46,10 @@ layout: ../layouts/uses.astro
 4. Dokku
 5. Google Domains
 6. AWS
+
+</br>
+
+---
 
 ## Hardware
 

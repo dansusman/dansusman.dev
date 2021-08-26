@@ -5,6 +5,7 @@ import { HeaderMobile } from '../components/HeaderMobile.tsx'
 import Footer from '../components/footer.astro';
 import {Links} from '../components/Links.tsx'
 import { getColor } from '../utils/primaryColorGenerator.ts'
+import ExpandMoreIcon from '../components/icons/ExpandMoreIcon.tsx';
 const {styleString, favicon} = getColor()
 ---
 <html lang="en">
@@ -23,6 +24,10 @@ const {styleString, favicon} = getColor()
     <HeaderDesktop />
     <HeaderMobile className="mobile-header"/>
     <slot/>
+    <div class="backlinks">
+        <a href="/about"><ExpandMoreIcon class="back"/>Read more about me.</a>
+        <a href="/projects">See some projects of mine.<ExpandMoreIcon class="forward"/></a>
+    </div>
 </body>
 <Footer/>
 <Links className="links" size="1.25em" smallerSize="1.1em"/>

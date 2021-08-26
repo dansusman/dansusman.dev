@@ -1,5 +1,6 @@
 * {
   font-family: "Poppins", sans-serif;
+  transition: 0.4s ease all;
 }
 body {
   padding-right: 3em;
@@ -26,6 +27,8 @@ body {
   --blue-rgb: 68, 134, 255;
   --purple-rgb: 202, 68, 255;
   --grey: rgba(0, 0, 0, 0.7);
+  --buttonGrey: rgba(0, 0, 0, 0.5);
+  --white: #fff;
 }
 
 a {

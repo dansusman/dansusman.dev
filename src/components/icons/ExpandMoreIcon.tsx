@@ -1,18 +1,23 @@
 import React from "react";
 
 interface ExpandMoreIconProps {
+  id?: string;
   class: string;
+  hidden?: string;
 }
 
 const ExpandMoreIcon: React.FC<ExpandMoreIconProps> = (props) => {
-  return (
+  return props.hidden === "true" ? (
+    <span id={props.id}></span>
+  ) : (
     <svg
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
       style={{ width: "inherit", height: "inherit" }}
+      width="1em"
+      height="1em"
       viewBox="0 0 24 24"
       className={props.class}
-      {...props}
     >
       <path d="M24 24H0V0h24v24z" opacity=".87" fill="none" />
       <path
