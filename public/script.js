@@ -5,6 +5,7 @@ Array.from(document.getElementsByTagName("button")).forEach((e) => {
 function projectToggle(e) {
   let project = e.target;
   off(project);
+  document.getElementById("info-heading").classList.add("show");
   let projectElement = document.getElementsByClassName(project.id)[0];
   if (projectElement !== undefined) {
     projectElement.classList.add("show");

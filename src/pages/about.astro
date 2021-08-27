@@ -53,10 +53,10 @@ const {styleString, favicon} = getColor()
         </div>
     </div>
     <div class="rightPane">
-        <ProfilePic client:only/>
+        <ProfilePic client:only="react" />
         <span class="task">
             <p class="currently">Dan is currently...</p>
-            <Activity client:load />
+            <Activity client:only="react" />
         </span>
     </div>
     <script src="/script.js"></script>

@@ -49,8 +49,6 @@ layout: ../layouts/uses.astro
 
 </br>
 
----
-
 ## Hardware
 
 #### Desktop

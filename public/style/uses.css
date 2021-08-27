@@ -67,3 +67,16 @@ ol {
     transform: rotate(-90deg) translateY(0.2em);
   }
 }
+
+@media screen and (max-width: 520px) {
+  .backlinks {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    text-align: center;
+  }
+}

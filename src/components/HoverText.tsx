@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 interface HoverTextProps {
+  class?: string;
   href: string;
   altText: string;
   originalText: string;
@@ -12,7 +13,7 @@ const HoverText: React.FC<HoverTextProps> = (props) => {
   return (
     <a
       target={props.open ? "_blank" : undefined}
-      className="hover-text"
+      className={props.class || "hover-text"}
       onMouseEnter={() => setIsShown(true)}
       onMouseLeave={() => setIsShown(false)}
       href={props.href}

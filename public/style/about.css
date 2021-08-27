@@ -62,6 +62,12 @@ ul {
   }
 }
 
+@media screen and (min-width: 1200px) {
+  .main {
+    font-size: clamp(1.25rem, 2vw, 2.5rem);
+  }
+}
+
 @media screen and (max-width: 820px) {
   .rightPane {
     width: fit-content;
@@ -70,5 +76,14 @@ ul {
 
   img {
     width: clamp(70%, 3vw, 100%);
+  }
+}
+
+@media screen and (min-width: 2000px) {
+  main {
+    max-width: unset;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

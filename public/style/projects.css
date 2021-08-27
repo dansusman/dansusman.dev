@@ -74,11 +74,13 @@ button:hover {
   margin-left: 2em;
 }
 
-.p {
+.p,
+.info-heading {
   display: none;
 }
 
-.p.show {
+.p.show,
+.info-heading.show {
   display: block;
 }
 
