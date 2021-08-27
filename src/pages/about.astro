@@ -4,12 +4,11 @@ import { HeaderMobile } from '../components/HeaderMobile.tsx'
 import Footer from '../components/footer.astro';
 import {Links} from '../components/Links.tsx'
 import { getColor } from '../utils/primaryColorGenerator.ts'
-import { getImage } from '../utils/imageGenerator.ts'
 import HoverText from '../components/HoverText.tsx'
 import { Activity } from '../components/Activity.tsx'
+import { ProfilePic } from '../components/ProfilePic.tsx'
 import superb from 'superb'
 const {styleString, favicon} = getColor()
-const {imageSource, imageAltText} = getImage()
 ---
 <html lang="en">
 <head>
@@ -29,7 +28,7 @@ const {imageSource, imageAltText} = getImage()
     <div class="main">
         <div>
             <h1>about me</h1>
-            <p class="info">I’m a third year student at Northeastern University, studying Computer Science. Since the beginning of my journey in the tech industry, I have thought writing optimized, efficient, abstracted code with clear and concise documentation is <HoverText client:load open href="https://github.com/sindresorhus/superb" altText={superb.random() + "."} originalText={superb.random() + "."}/>
+            <p class="info">I’m a third year student at Northeastern University, studying Computer Science. Since the beginning of my journey in the tech industry, I have thought writing optimized, efficient, abstracted code with clear and concise documentation is <HoverText client:only open href="https://github.com/sindresorhus/superb" altText={superb.random() + "."} originalText={superb.random() + "."}/>
             <br/>
             In 2021, I spent eight months at <a class="cvrs" target="_blank" href="https://www.corindus.com/">Corindus Vascular Robotics, a Siemens Healthineers Company,</a> where I was a full-time software engineer. There, I focused on application development, DevOps, automation, and robotic systems design.
             <br/>
@@ -54,14 +53,13 @@ const {imageSource, imageAltText} = getImage()
         </div>
     </div>
     <div class="rightPane">
-        <span class="images">
-            <img src={imageSource} alt={imageAltText}/>
-        </span>
+        <ProfilePic client:only/>
         <span class="task">
             <p class="currently">Dan is currently...</p>
             <Activity client:load />
         </span>
     </div>
+    <script src="/script.js"></script>
     <script src="/start.js"></script>
 </body>
 <Footer/>

@@ -28,6 +28,7 @@ const {styleString, favicon} = getColor()
 <body>
     <HeaderDesktop />
     <HeaderMobile className="mobile-header"/>
+    <div class="project-main">
     <div class="main">
         <div class="project-pane">
             <h1>projects</h1>
@@ -39,6 +40,7 @@ const {styleString, favicon} = getColor()
             <button id="animate">animation editor</button>
         </div>
         <div class="content-pane">
+            <h1>info</h1>
             <div class="p wroteit">
                 <h3>wroteit</h3>
                 wroteit is a boiled down clone of the popular website reddit.com. Currently, wroteit supports creating/editing/deleting/reading text posts, upvoting/downvoting posts, and login/sign up user functionality. Future additions include comments and support for image/video/audio posts.
@@ -93,7 +95,7 @@ const {styleString, favicon} = getColor()
         <a href="/"><ExpandMoreIcon class="back"/>Go home.</a>
         <a class="furthermore" href="/uses">See some tools I use.<ExpandMoreIcon class="forward"/></a>
         <a class="furthermore" href="/about">Read more about me.<ExpandMoreIcon class="forward"/></a>
-    </div>
+    </div></div>
     <script src="/script.js"></script>
     <script src="/start.js"></script>
 </body> 

@@ -1,6 +1,6 @@
 * {
   font-family: "Poppins", sans-serif;
-  transition: 0.4s ease all;
+  transition: all 0.4s ease, color 1ms;
 }
 
 body {
