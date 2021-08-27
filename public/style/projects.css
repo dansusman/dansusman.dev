@@ -40,7 +40,7 @@ a:hover {
 button {
   background: none;
   border: none;
-  font-size: clamp(1em, 6vw, 1.4em);
+  font-size: clamp(1em, 6vw, 1.2em);
   width: fit-content;
   white-space: nowrap;
 }
@@ -85,7 +85,9 @@ button:hover {
 }
 
 .small {
-  font-size: clamp(0.5rem, 2vw, 1.05rem);
+  font-size: clamp(0.5rem, 2vw, 1.52rem);
+  margin-top: 2em;
+  margin-bottom: 2em;
 }
 
 .visit {
@@ -148,5 +150,6 @@ button:hover {
   }
   .backlinks {
     margin-bottom: 1em;
+    margin-top: 9em;
   }
 }
