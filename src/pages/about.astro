@@ -3,12 +3,11 @@ import HeaderDesktop from '../components/HeaderDesktop.tsx';
 import { HeaderMobile } from '../components/HeaderMobile.tsx'
 import Footer from '../components/footer.astro';
 import {Links} from '../components/Links.tsx'
-import { getAction } from '../utils/activityGenerator.ts'
 import { getColor } from '../utils/primaryColorGenerator.ts'
 import { getImage } from '../utils/imageGenerator.ts'
 import HoverText from '../components/HoverText.tsx'
+import { Activity } from '../components/Activity.tsx'
 import superb from 'superb'
-const {activityEmoji, activity} = getAction(new Date());
 const {styleString, favicon} = getColor()
 const {imageSource, imageAltText} = getImage()
 ---
@@ -26,7 +25,7 @@ const {imageSource, imageAltText} = getImage()
 </head>
 <HeaderDesktop client:media="(min-width: 960px)" />
 <HeaderMobile className="mobile-header"/>
-<body style={styleString}>
+<body>
     <div class="main">
         <div>
             <h1>about me</h1>
@@ -60,12 +59,10 @@ const {imageSource, imageAltText} = getImage()
         </span>
         <span class="task">
             <p class="currently">Dan is currently...</p>
-            <span class="emojiAndStatus">
-                <p class="emoji">{activityEmoji}</p>
-                <p class="status">{activity}</p>
-            </span>
+            <Activity client:load />
         </span>
     </div>
+    <script src="/start.js"></script>
 </body>
 <Footer/>
 <Links className="links" size="1.25em" smallerSize="1.1em"/>

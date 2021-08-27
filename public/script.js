@@ -1,4 +1,3 @@
-console.log("hi there from toggle");
 Array.from(document.getElementsByTagName("button")).forEach((e) => {
   e.addEventListener("click", projectToggle);
 });

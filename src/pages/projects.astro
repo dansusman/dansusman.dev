@@ -25,7 +25,7 @@ const {styleString, favicon} = getColor()
     </style>
     <script src="/script.js"></script>
 </head>
-<body style={styleString}>
+<body>
     <HeaderDesktop />
     <HeaderMobile className="mobile-header"/>
     <div class="main">
@@ -87,11 +87,15 @@ const {styleString, favicon} = getColor()
                 <br/>
                 <a href="mailto:danielasusman@gmail.com" class="visitLink">Reach out to hear more.</a>
             </div>
-            <div class="p animate show"></div>
-
         </div>
     </div>
+    <div class="backlinks">
+        <a href="/"><ExpandMoreIcon class="back"/>Go home.</a>
+        <a class="furthermore" href="/uses">See some tools I use.<ExpandMoreIcon class="forward"/></a>
+        <a class="furthermore" href="/about">Read more about me.<ExpandMoreIcon class="forward"/></a>
+    </div>
     <script src="/script.js"></script>
+    <script src="/start.js"></script>
 </body> 
 <Footer/>
 <Links className="links" size="1.25em" smallerSize="1.1em"/>
