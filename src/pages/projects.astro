@@ -7,10 +7,10 @@ import {VisitButton} from '../components/VisitButton.tsx'
 import ExpandMoreIcon from '../components/icons/ExpandMoreIcon.tsx';
 import { getColor } from '../utils/primaryColorGenerator.ts'
 const {styleString, favicon} = getColor()
-const showItem = (id: string) => { return `document.getElementsByClassName('${id}')[0].classList.add('show');` }
-const clearMode = "Array.from(document.getElementsByClassName('p')).forEach((e) => {e.classList.remove('show')});Array.from(document.getElementsByTagName('button')).forEach((e) => {e.classList.remove('active')});"
-const toggleActive = (id: string) => { return `document.getElementById('${id}').classList.add('active');`}
-const clearAndShow = (id : string) => { return clearMode + showItem(id) + toggleActive(id)}
+// const showItem = (id: string) => { return `document.getElementsByClassName('${id}')[0].classList.add('show');` }
+// const clearMode = "Array.from(document.getElementsByClassName('p')).forEach((e) => {e.classList.remove('show')});Array.from(document.getElementsByTagName('button')).forEach((e) => {e.classList.remove('active')});"
+// const toggleActive = (id: string) => { return `document.getElementById('${id}').classList.add('active');`}
+// const clearAndShow = (id : string) => { return clearMode + showItem(id) + toggleActive(id)}
 ---
 <html lang="en">
 <head>
@@ -23,6 +23,7 @@ const clearAndShow = (id : string) => { return clearMode + showItem(id) + toggle
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
     </style>
+    <script src="/script.js"></script>
 </head>
 <body style={styleString}>
     <HeaderDesktop />
@@ -30,12 +31,12 @@ const clearAndShow = (id : string) => { return clearMode + showItem(id) + toggle
     <div class="main">
         <div class="project-pane">
             <h1>projects</h1>
-            <button id="wroteit" onclick={clearAndShow('wroteit')}>wroteit</button>
-            <button id="portfolio" onclick={clearAndShow('portfolio')} >portfolio</button>  
-            <button id="ui" onclick={clearAndShow('ui')}>robotics system ui</button>
-            <button id="cloud" onclick={clearAndShow('cloud')}>robotic system cloud</button>
-            <button id="algo" onclick={clearAndShow('algo')}>sorting algorithm visualizer</button>
-            <button id="animate" onclick={clearAndShow('animate')}>animation editor</button>
+            <button id="wroteit">wroteit</button>
+            <button id="portfolio">portfolio</button>  
+            <button id="ui">robotics system ui</button>
+            <button id="cloud">robotic system cloud</button>
+            <button id="algo">sorting algorithm visualizer</button>
+            <button id="animate">animation editor</button>
         </div>
         <div class="content-pane">
             <div class="p wroteit">
@@ -90,6 +91,7 @@ const clearAndShow = (id : string) => { return clearMode + showItem(id) + toggle
 
         </div>
     </div>
+    <script src="/script.js"></script>
 </body> 
 <Footer/>
 <Links className="links" size="1.25em" smallerSize="1.1em"/>
