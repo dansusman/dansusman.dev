@@ -28,15 +28,6 @@ br {
   display: block;
 }
 
-a {
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: none;
-  background-color: initial;
-}
-
 button {
   background: none;
   border: none;
@@ -74,13 +65,11 @@ button:hover {
   margin-left: 2em;
 }
 
-.p,
-.info-heading {
+.p {
   display: none;
 }
 
-.p.show,
-.info-heading.show {
+.p.show {
   display: block;
   padding-left: 1em;
   padding-right: 1em;
@@ -117,6 +106,10 @@ button:hover {
   font-size: clamp(1rem, 2vw, 1.5rem);
 }
 
+.backlinks a {
+  text-decoration: none;
+}
+
 .back {
   transform: rotate(90deg);
   vertical-align: middle;
@@ -142,7 +135,7 @@ button:hover {
 }
 
 .backlinks {
-  margin-top: 9em;
+  margin-top: 6em;
 }
 
 @media screen and (max-width: 820px) {
@@ -153,10 +146,6 @@ button:hover {
 
   .content-pane {
     margin-left: unset;
-  }
-
-  .backlinks {
-    margin-top: 6rem;
   }
 
   .d {
@@ -173,7 +162,6 @@ button:hover {
     text-decoration: none;
     background-color: inherit;
   }
-
   .backlinks {
     text-align: center;
   }

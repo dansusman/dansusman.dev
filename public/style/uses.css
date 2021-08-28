@@ -1,8 +1,9 @@
 h1 {
   font-weight: bold;
   color: var(--theme-primary);
-  font-size: clamp(2rem, 6vw, 1.75em);
+  font-size: clamp(1rem, 6vw, 2.25rem);
 }
+
 ol {
   list-style-position: inside;
 }
