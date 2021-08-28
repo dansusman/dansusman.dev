@@ -1,15 +1,17 @@
 ---
-import HeaderDesktop from '../components/HeaderDesktop.tsx';
+import HeaderDesktop from '../components/HeaderDesktop.tsx'
 import { HeaderMobile } from '../components/HeaderMobile.tsx'
-import Footer from '../components/footer.astro';
+import Footer from '../components/footer.astro'
 import {Links} from '../components/Links.tsx'
-import ExpandMoreIcon from '../components/icons/ExpandMoreIcon.tsx';
+import ExpandMoreIcon from '../components/icons/ExpandMoreIcon.tsx'
 import HoverText from '../components/HoverText.tsx'
+import {DynamicFavicon} from '../components/DynamicFavicon.tsx'
 
 ---
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="/start.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta property="og:title" content="Daniel Susman" />
     <meta name="og:type" content="website">
@@ -19,6 +21,8 @@ import HoverText from '../components/HoverText.tsx'
     <title>{"dansusman: developer"}</title>
     <link rel="stylesheet" href="/style/global.css">
     <link rel="stylesheet" href="/style/home.css">
+    <link id="dynamic-fav" rel="icon" href="/favicon/white.svg" />
+    <link id="dynamic-apple-fav" rel="icon" href="/favicon/white.svg" />
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
     </style>
