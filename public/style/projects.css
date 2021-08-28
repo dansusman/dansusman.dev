@@ -171,4 +171,12 @@ button:hover {
   .m {
     display: none;
   }
+
+  h1 {
+    margin-bottom: 0;
+  }
+
+  .backlinks {
+    margin-top: 2em;
+  }
 }

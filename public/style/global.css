@@ -61,7 +61,7 @@ header a:hover {
 .headerLinks {
   display: flex;
   margin-left: auto;
-  gap: clamp(0.3em, 2vw, 3em);
+  gap: clamp(1em, 2vw, 3em);
 }
 
 footer {
@@ -89,12 +89,16 @@ footer svg {
   display: none;
 }
 
+.links a:hover {
+  background: inherit;
+}
+
 .link-container {
   display: flex;
   width: 100%;
   justify-content: center;
   align-items: center;
-  gap: clamp(0.3em, 2vw, 3em);
+  gap: clamp(1em, 2vw, 3em);
 }
 
 .heart {
