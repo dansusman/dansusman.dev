@@ -48,6 +48,7 @@ header {
   width: 100%;
   align-items: center;
   transition: unset;
+  position: sticky;
 }
 
 header a:hover {
@@ -125,6 +126,11 @@ footer svg {
     display: none;
   }
 
+  body {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
   .mobile-header {
     display: unset;
     left: 0;
@@ -136,5 +142,8 @@ footer svg {
   .links {
     display: unset;
   }
-}
 
+  * {
+    transition: unset;
+  }
+}

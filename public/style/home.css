@@ -5,8 +5,8 @@ main {
   align-items: center;
 }
 
-abbr:hover {
-  text-decoration: none;
+a {
+  text-decoration: underline;
 }
 
 .about {
@@ -26,9 +26,9 @@ abbr:hover {
 .such-as {
   color: var(--theme-primary);
   display: flex;
-  width: fit-content;
   margin-top: 1em;
   white-space: nowrap;
+  text-decoration: none;
 }
 
 .hover-text {

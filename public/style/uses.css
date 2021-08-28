@@ -3,12 +3,13 @@ h2,
 h3,
 h4 {
   font-weight: inherit;
-  line-height: 1.42;
+  margin: 0;
 }
 
 h1 {
-  font-size: 3.998rem;
-  text-align: center;
+  font-weight: bold;
+  color: var(--theme-primary);
+  font-size: clamp(2rem, 6vw, 1.75em);
 }
 
 h2 {
@@ -71,12 +72,6 @@ ol {
 @media screen and (max-width: 520px) {
   .backlinks {
     flex-direction: column;
-    text-align: center;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-  body {
     text-align: center;
   }
 }

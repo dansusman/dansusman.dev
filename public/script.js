@@ -4,12 +4,20 @@ Array.from(document.getElementsByTagName("button")).forEach((e) => {
 
 function projectToggle(e) {
   let project = e.target;
-  off(project);
-  document.getElementById("info-heading").classList.add("show");
   let projectElement = document.getElementsByClassName(project.id)[0];
+  let toggleElement = document.getElementById(project.id);
+  if (
+    projectElement.classList.contains("show") ||
+    toggleElement.classList.contains("active")
+  ) {
+    off(project);
+    return;
+  }
+
+  off(project);
   if (projectElement !== undefined) {
     projectElement.classList.add("show");
-    document.getElementById(project.id).classList.add("active");
+    toggleElement.classList.add("active");
   }
 }
 

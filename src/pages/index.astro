@@ -3,10 +3,8 @@ import HeaderDesktop from '../components/HeaderDesktop.tsx';
 import { HeaderMobile } from '../components/HeaderMobile.tsx'
 import Footer from '../components/footer.astro';
 import {Links} from '../components/Links.tsx'
-import { getColor } from '../utils/primaryColorGenerator.ts'
 import ExpandMoreIcon from '../components/icons/ExpandMoreIcon.tsx';
 import HoverText from '../components/HoverText.tsx'
-const {styleString, favicon} = getColor()
 
 ---
 <html lang="en">
@@ -19,7 +17,6 @@ const {styleString, favicon} = getColor()
     <meta name="theme-color" content="#1B99FF">
     <meta name="og:image" content="/img/BLACK.png" />
     <title>{"dansusman: developer"}</title>
-    <link rel="icon" type="image/svg+xml" href={favicon}>
     <link rel="stylesheet" href="/style/global.css">
     <link rel="stylesheet" href="/style/home.css">
     <style>

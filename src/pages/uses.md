@@ -2,7 +2,7 @@
 layout: ../layouts/uses.astro
 ---
 
-# /uses
+# uses
 
 ## Programming
 
@@ -47,13 +47,11 @@ layout: ../layouts/uses.astro
 5. Google Domains
 6. AWS
 
-</br>
-
 ## Hardware
 
 #### Desktop
 
-1. 13-inch MacBook Pro 2020 Intel Core i7 32GB RAM - Space Gray
+1. 13-inch MacBook Pro 2020 Intel Core i7 32GB RAM
 2. LG 27UL650
 3. Anne Pro 2
 4. Logitech G305 Lightspeed

@@ -19,7 +19,6 @@ const {styleString, favicon} = getColor()
     <meta name="theme-color" content="#1B99FF">
     <meta name="og:image" content="/img/BLACK.png" />
     <title>{"dansusman: /projects"}</title>
-    <link rel="icon" type="image/svg+xml" href={favicon}>
     <link rel="stylesheet" href="/style/global.css">
     <link rel="stylesheet" href="/style/projects.css">
     <style>
@@ -34,15 +33,63 @@ const {styleString, favicon} = getColor()
     <div class="main">
         <div class="project-pane">
             <h1>projects</h1>
-            <button id="wroteit">wroteit</button>
-            <button id="portfolio">portfolio</button>  
-            <button id="ui">robotics system ui</button>
-            <button id="cloud">robotic system cloud</button>
-            <button id="algo">sorting algorithm visualizer</button>
-            <button id="animate">animation editor</button>
+            <div class="wroteit-container">
+            <button class="d" id="wroteit">wroteit</button>
+            <button class="m" id="wroteitm">wroteit</button>
+            <div class="p wroteitm">
+                wroteit is a boiled down clone of the popular website reddit.com. Currently, wroteit supports creating/editing/deleting/reading text posts, upvoting/downvoting posts, and login/sign up user functionality. Future additions include comments and support for image/video/audio posts.
+                <br/>
+                <p class="small">Ingredients: TypeScript, GraphQL, React, Chakra UI, PostgreSQL, Next.js, Redis, TypeORM, and urql.</p>
+                <br/>
+                <VisitButton href="https://wroteit.dansusman.dev"/>
+            </div></div>
+            <button class="d" id="portfolio">portfolio</button>
+            <button class="m" id="portfoliom">portfolio</button>
+            <div class="p portfoliom">
+                The website you are looking at; a portfolio website to display my work.
+                <br/>
+                <p class="small">Ingredients: Astro.js, TypeScript, HTML, CSS, React</p>
+                <br/>
+                <VisitButton href="/"/>
+            </div>
+            <button class="d" id="ui">robotics system ui</button>
+            <button class="m" id="uim">robotics system ui</button>
+            <div class="p uim">
+                During my eight month co-op experience at Corindus Vascular Robotics, one project to which I contributed was UI application development. My team and I crafted four embedded applications to interface our ground-breaking medical robotic system.
+                <br/>
+                <p class="small">Ingredients: Qt framework, C++, QML, Figma, teamwork, perserverance, superb project management</p>
+                <br/>
+                <a href="mailto:danielasusman@gmail.com" class="visitLink">Reach out to hear more.</a>
+            </div>
+            <button class="d" id="cloud">robotic system cloud</button>
+            <button class="m" id="cloudm">robotic system cloud</button>
+            <div class="p cloudm">
+                At Corindus Vascular Robotics, I contributed to cloud development as an active member of the Cloud Services team. I worked on automated integration tests (targeting an API, Web App, and PostgreSQL database), software and subsystem requirements, general purpose DevOps scripts, Azure pipelines, and web app design/implementation.
+                <br/>
+                <p class="small">Ingredients: Python, SQL, Docker, Bash, Pytest, YAML, Selenium, TypeScript, Java, Azure DevOps, AWS</p>
+                <br/>
+                <a href="mailto:danielasusman@gmail.com" class="visitLink">Reach out to hear more.</a>
+            </div>
+            <button class="d" id="algo">sorting algorithm visualizer</button>
+            <button class="m" id="algom">sorting algorithm visualizer</button>
+            <div class="p algom">
+                A desktop application for visualizing popular sorting algorithms. Demonstrates time and space complexity, at least partially. Given the slow nature of some Python operations, as well as the differences in OSes, background tasks, etc., this app is not meant as an algorithm timer. Instead, it gives the user an idea of how different algorithms work, step-by-step.
+                <br/>
+                <p class="small">Ingredients: Python, PyGame, Pytest, Deep Understanding of Algorithms and Big-Oh Notation</p>
+                <br/>
+                <VisitButton href="https://github.com/dansusman/Sorting_Algorithm_Visualizer"/>
+            </div>
+            <button class="d" id="animate">animation editor</button>
+            <button class="m" id="animatem">animation editor</button>
+            <div class="p animatem">
+                The ExCELence animation editor is a desktop application that allows a user to play, pause, edit, and save animations. Each animation is described in an input text file and displayed as read in. From there, a user can alter keyframes, add/edit/remove animations, add/edit/remove shapes, and change the layering of animated shapes. Like YouTube, scrubbing through an animation is fully supported and performance is optimized.
+                <br/>
+                <p class="small">Ingredients: Java, Object-Oriented Design, MVC pattern, JUnit, pair programming, patience, and a whole lotta coffee.</p>
+                <br/>
+                <a href="mailto:danielasusman@gmail.com" class="visitLink">Reach out to hear more.</a>
+            </div>
         </div>
         <div class="content-pane">
-            <h1 id="info-heading" class="info-heading">info</h1>
             <div class="p wroteit">
                 <h3>wroteit</h3>
                 wroteit is a boiled down clone of the popular website reddit.com. Currently, wroteit supports creating/editing/deleting/reading text posts, upvoting/downvoting posts, and login/sign up user functionality. Future additions include comments and support for image/video/audio posts.
