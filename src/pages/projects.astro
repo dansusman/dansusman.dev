@@ -7,17 +7,19 @@ import {VisitButton} from '../components/VisitButton.tsx'
 import ExpandMoreIcon from '../components/icons/ExpandMoreIcon.tsx';
 import { getColor } from '../utils/primaryColorGenerator.ts'
 const {styleString, favicon} = getColor()
-// const showItem = (id: string) => { return `document.getElementsByClassName('${id}')[0].classList.add('show');` }
-// const clearMode = "Array.from(document.getElementsByClassName('p')).forEach((e) => {e.classList.remove('show')});Array.from(document.getElementsByTagName('button')).forEach((e) => {e.classList.remove('active')});"
-// const toggleActive = (id: string) => { return `document.getElementById('${id}').classList.add('active');`}
-// const clearAndShow = (id : string) => { return clearMode + showItem(id) + toggleActive(id)}
 ---
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Daniel Susman" />
+    <meta name="og:type" content="website">
+    <meta name="og:site_name" content="Daniel Susman">
+    <meta name="theme-color" content="#1B99FF">
     <title>{"dansusman: /projects"}</title>
     <link rel="icon" type="image/svg+xml" href={favicon}>
+    <link rel="apple-touch-icon" href="/assets/icon/GREEN.svg">
     <link rel="stylesheet" href="/style/global.css">
     <link rel="stylesheet" href="/style/projects.css">
     <style>
