@@ -145,11 +145,28 @@ button:hover {
     display: flex;
     flex-direction: column;
   }
+
   .content-pane {
     margin-left: unset;
   }
+
   .backlinks {
     margin-bottom: 1em;
     margin-top: 9em;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  button {
+    margin: 0;
+    padding: 0;
+  }
+  button:hover {
+    text-decoration: none;
+    background-color: inherit;
+  }
+
+  .backlinks {
+    margin-top: 3em;
   }
 }

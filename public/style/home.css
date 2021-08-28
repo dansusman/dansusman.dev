@@ -28,6 +28,7 @@ abbr:hover {
   display: flex;
   width: fit-content;
   margin-top: 1em;
+  white-space: nowrap;
 }
 
 .hover-text {
