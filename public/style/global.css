@@ -34,7 +34,6 @@ body {
 
 a {
   color: var(--theme-primary);
-  text-decoration: none;
 }
 
 a:hover {

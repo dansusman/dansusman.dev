@@ -27,6 +27,10 @@ ol {
   animation: floatForward 1.4s ease-in-out infinite;
 }
 
+.backlinks a {
+  text-decoration: none;
+}
+
 @keyframes floatBack {
   50% {
     transform: rotate(90deg) translateY(0.2em);
