@@ -14,7 +14,6 @@
   },
   "dependencies": {
     "astro": "^0.20.3",
-    "markdown-air": "^0.0.4",
     "superb": "^4.0.0",
     "yarn": "^1.22.10"
   }
